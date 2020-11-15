@@ -1,0 +1,59 @@
+$card-width: 600px;
+.card-speaker {
+  width: $card-width;
+  display: flex;
+  background-color: snow;
+  border: 1px solid #ff0000;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.08), 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  margin: 7px;
+  .card-hl {
+    background-color: rgb(0, 34, 68);
+    border-radius: 7px 0px 0px 7px;
+    border: 1px solid rgb(0, 34, 68);
+    width: 20px;
+
+    &.expanded {
+      background-color: rgb(252, 76, 2);
+      min-height: 100px;
+    }
+  }
+  .cardsp {
+    width: 100%;
+    .cardsp-header {
+      border-bottom: 1px solid #c3c3c3;
+      display: flex;
+      background-color: beige;
+
+      .cardsp-title {
+        width: auto;
+      }
+
+      a {
+        img {
+          transition: transform 0.5s;
+          &.expanded {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &.expanded {
+        border-bottom: 1px solid #d3d3d3;
+      }
+    }
+
+    .cardsp-body {
+      overflow-y: auto;
+      display: none;
+      height: 0px;
+      transition: height 0.7s;
+
+      &.expanded {
+        display: block;
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+}

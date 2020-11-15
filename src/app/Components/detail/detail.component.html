@@ -1,0 +1,9 @@
+<div class="detail">
+<div *ngIf="!data" class="spiiner">
+  <i class="fa fa-spinner fa-2x"></i>
+</div>
+
+<div *ngFor="let item of data">
+  {{item.name}}:{{item.value}}
+</div>
+</div>

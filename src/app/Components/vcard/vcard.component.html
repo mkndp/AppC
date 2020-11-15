@@ -1,0 +1,23 @@
+
+
+<div class="card-speaker">
+  <div class="card-hl" [class.expanded]="expanded">
+  </div>
+    <div class="cardsp" [class.expanded]="expanded">
+      <div class="cardsp-header"  (click)="expand()">
+        <a >
+          <img [class.expanded]="expanded" src="../../../assets/Images/svg/chevron-down.svg" />
+        </a>
+        <div class="cardsp-title">
+          <ng-content select="f-header"></ng-content>
+        </div>
+      </div>
+      <div class="cardsp-body" [class.expanded]="expanded">
+        <ng-content></ng-content>
+      </div>
+    </div>
+
+
+
+
+</div>
